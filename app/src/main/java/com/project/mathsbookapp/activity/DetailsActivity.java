@@ -50,8 +50,6 @@ public class DetailsActivity extends AppCompatActivity implements ClickListener 
     PreferenceHelper helper;
     boolean favourite;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         helper =  new PreferenceHelper(this);

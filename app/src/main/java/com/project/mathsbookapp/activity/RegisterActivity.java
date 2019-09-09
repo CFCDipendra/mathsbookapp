@@ -1,5 +1,6 @@
 package com.project.mathsbookapp.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText mNameEditText, mEmailEditText, mPasswordEditText, mAddressEditText, mPhoneEditText, mConfirmPasswordEditText;
     Button mRegisterButton;
-    // ProgressDialog mProgressDialog;
+    ProgressDialog mProgressDialog;
     String email, password;
     Uri file;
     private FirebaseAuth mAuth;
@@ -116,10 +117,11 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (!Patterns.EMAIL_ADDRESS.matcher ( email ).matches ()) {
                     mEmailEditText.setError ( "Please enter valid email address" );
                 } else {
-                    //mProgressDialog = new ProgressDialog(RegisterActivity.this);
-                    // mProgressDialog.setTitle("Signing up");
-                    //mProgressDialog.show();
-                    // mProgressDialog.setCancelable(false);
+
+                    mProgressDialog = new ProgressDialog(RegisterActivity.this);
+                    mProgressDialog.setTitle("Signing up");
+                    mProgressDialog.show();
+                    mProgressDialog.setCancelable(false);
                     newEmailPassword ();
                 }
             }
@@ -131,12 +133,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful ()) {
-                    // mProgressDialog.dismiss();
+                     mProgressDialog.dismiss();
                     Toast.makeText ( RegisterActivity.this , "User already exists" , Toast.LENGTH_SHORT ).show ();
                 } else if (task.isSuccessful ()) {
                     addUsername ();
                 } else {
-                    //mProgressDialog.dismiss();
+                    mProgressDialog.dismiss();
                     Toast.makeText ( RegisterActivity.this , "Something went wrong. Please try again." , Toast.LENGTH_SHORT ).show ();
                 }
             }

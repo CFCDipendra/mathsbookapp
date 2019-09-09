@@ -1,6 +1,7 @@
 package com.project.mathsbookapp.activity;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -26,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText mEmailEditText, mPasswordEditText;
     Button mLoginButton, mRegisterButton;
     String email, password, newPass, oldpass;
-   // ProgressDialog progressDialog;
+    ProgressDialog progressDialog;
     TextView mForgetPassword;
     private FirebaseAuth mAuth;
 
@@ -114,24 +115,24 @@ public class LoginActivity extends AppCompatActivity {
         } else if (!(Patterns.EMAIL_ADDRESS.matcher(mEmailEditText.getText().toString()).matches())) {
             Toast.makeText(LoginActivity.this, "Please provide valid email address.", Toast.LENGTH_SHORT).show();
         } else {
-            //progressDialog = new ProgressDialog(LoginActivity.this);
-           // progressDialog.setTitle("Signing in...");
-            //progressDialog.show();
+            progressDialog = new ProgressDialog(LoginActivity.this);
+            progressDialog.setTitle("Signing in...");
+            progressDialog.show();
             mAuth.signInWithEmailAndPassword(Email, Password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (!task.isSuccessful()) { //login failed
-                      //  progressDialog.dismiss();
+                        progressDialog.dismiss();
                         Toast.makeText(LoginActivity.this, "Invalid username or password.", Toast.LENGTH_SHORT).show();
                     } else if (task.isSuccessful()) { //login successful
-                      //  progressDialog.dismiss();
+                        progressDialog.dismiss();
                         Toast.makeText(LoginActivity.this, "Successfully logged in.", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                         finish();
                     } else {
-                       // progressDialog.dismiss();
+                        progressDialog.dismiss();
                         Toast.makeText(LoginActivity.this, "Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
-                    }// ...
+                    }
                 }
             });
         }
