@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "550163022638",
+    "firebase_url": "https://mathsbookapp.firebaseio.com",
+    "project_id": "mathsbookapp",
+    "storage_bucket": "mathsbookapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550163022638:android:5d8b524973536ccc",
+        "android_client_info": {
+          "package_name": "com.project.mathsbookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550163022638-d2e3gdidibvkq4p9dvtjkodpv18m0tb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUuiaL8AsJwe1_8CkPks5Gltouo0hr6Jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550163022638-d2e3gdidibvkq4p9dvtjkodpv18m0tb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

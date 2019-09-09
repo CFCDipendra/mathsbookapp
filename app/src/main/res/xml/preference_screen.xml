@@ -1,0 +1,56 @@
+<androidx.preference.PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="General">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about"
+            app:title="About Us"/>
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="contribute"
+            app:title="Contribute to the app" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="license"
+            app:title="Open Source Licenses"/>
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="rate"
+            app:title="Rate App"/>
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="feedback"
+            app:title="Send Feedback"
+            app:summary="Report technical issues or suggest new features"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="Customize">
+
+        <SwitchPreferenceCompat
+            app:key="@string/key_darkTheme"
+            app:iconSpaceReserved="false"
+            app:title="Enable Dark Theme"
+            app:summary="Enable dark theme throughout app (Restarts App Automatically)"
+            app:defaultValue="false"/>
+
+        <ListPreference
+            app:key="@string/key_font"
+            app:title="Set Font Size"
+            app:iconSpaceReserved="false"
+            app:entries="@array/settings_list_preference_font"
+            app:entryValues="@array/settings_list_preference_values"
+            app:defaultValue="3"
+            app:summary="Set font size according to your liking"/>
+
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

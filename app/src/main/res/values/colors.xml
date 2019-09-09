@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button_pressed_background">#427cb6</color>
+    <color name="button_enabled_background">#0888ac</color>
+    <color name="login_background">#804ABD59</color>
+    <color name="button_disabled_background">#878282</color>
+    <color name="login_bg">#60a885d1</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="red">#ef0f16</color>
+    <color name="white">#ffffff</color>
+    <color name="detection_bg">#c7c7c7</color>
+    <color name="black">#000000</color>
+    <color name="button_login">#8013a8ce</color>
+    <color name="register_background">#80377281</color>
+    <color name="green">#50fe00</color>
+    <color name="dark_gray">#a9a9a9</color>
+    <color name="bg_circle_default">#666666</color>
+
+
+
+</resources>
