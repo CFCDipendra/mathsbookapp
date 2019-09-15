@@ -14,14 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.project.mathsbookapp.activity.LoginActivity">
+        <activity android:name="com.project.mathsbookapp.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.project.mathsbookapp.activity.RegisterActivity">
+        <activity android:name="com.project.mathsbookapp.activity.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity

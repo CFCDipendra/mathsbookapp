@@ -1,6 +1,7 @@
 package com.project.mathsbookapp.activity;
 
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,16 +22,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.project.mathsbookapp.R;
 
-
 public class LoginActivity extends AppCompatActivity {
-
     EditText mEmailEditText, mPasswordEditText;
     Button mLoginButton, mRegisterButton;
     String email, password, newPass, oldpass;
     ProgressDialog progressDialog;
     TextView mForgetPassword;
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,20 +42,15 @@ public class LoginActivity extends AppCompatActivity {
         mRegisterButton = (Button) findViewById(R.id.activity_login_register_button);
         mForgetPassword = (TextView) findViewById(R.id.activity_login_forgot_password_textview);
 
-
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 email = mEmailEditText.getText().toString();
                 password = mPasswordEditText.getText().toString();
-
                 if (mEmailEditText.getText().toString().length() < 1) {
                     mEmailEditText.setError("Please enter Email");
-
                 } else if (mPasswordEditText.getText().toString().length() < 1) {
                     mPasswordEditText.setError("Please enter Password");
-
                 } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     Toast.makeText(LoginActivity.this, " Please enter Valid Email", Toast.LENGTH_SHORT).show();
                 } else {
@@ -66,7 +59,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,15 +66,9 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
         mForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 FirebaseAuth auth = FirebaseAuth.getInstance();
                 String emailAddress = mEmailEditText.getText().toString();
                 auth.sendPasswordResetEmail(emailAddress)
