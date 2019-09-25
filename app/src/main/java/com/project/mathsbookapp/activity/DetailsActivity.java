@@ -59,15 +59,12 @@ public class DetailsActivity extends AppCompatActivity implements ClickListener 
         if(darkTheme){
             setTheme(R.style.AppTheme_DarkTheme);
         }
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+      setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         Gson gson = new Gson();
         setupWindowAnimations();
-
-
 
         final String topicName = getIntent().getStringExtra("topic_selected");
         final String topicFileLocation = getIntent().getStringExtra("topic_file_name");

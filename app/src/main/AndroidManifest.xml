@@ -36,16 +36,11 @@
         <activity
             android:name="com.project.mathsbookapp.activity.DetailsActivity"
             android:label="@string/title_activity_topic"
-            android:parentActivityName="com.project.mathsbookapp.activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.mathsbookapp.activity.HomeActivity" />
         </activity>
-
-
-
     </application>
 
 </manifest>

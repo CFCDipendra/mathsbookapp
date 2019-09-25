@@ -50,7 +50,7 @@
             android:id="@+id/formula_container"
             android:layout_height="wrap_content">
 
-            <com.project.mathsbookapp.MathView
+            <com.alphabyte.mathview.MathViewgi
                 app:setTextColor="@android:color/darker_gray"
                 app:setTextSize="14sp"
                 app:setClickable="true"

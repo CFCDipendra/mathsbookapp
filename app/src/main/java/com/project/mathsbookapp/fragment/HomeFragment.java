@@ -66,8 +66,6 @@ public class HomeFragment extends Fragment {
         String rawData;
 
         preferenceHelper = new PreferenceHelper(getContext());
-
-
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
         try {
